@@ -21,7 +21,7 @@ class ViewModel : ObservableObject{
 //        let date : String = formattedDate(selectedDate: selectedDate)
         loading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().fixture)\(date)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -47,6 +47,7 @@ class ViewModel : ObservableObject{
                 
             } catch {
                 print("Error decoding JSON: \(error)")
+                print("Error decoding JSON: \(error)")
                 self.loading = false;
             }
             
@@ -63,7 +64,7 @@ class ViewModel : ObservableObject{
     func liveGet(){
         self.liveloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().livematch)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -96,7 +97,7 @@ class ViewModel : ObservableObject{
     func leagueGet(){
         leagueloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().league)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -129,7 +130,7 @@ class ViewModel : ObservableObject{
     func matchDetailsGet(fixtureid: Int){
         detailsLoading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().matchdetails)\(fixtureid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -180,7 +181,7 @@ class ViewModel : ObservableObject{
     func headToHeadGet(teamid1: Int, teamid2: Int){
         headToHeadloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().headTohead)\(teamid1)-\(teamid2)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -213,7 +214,7 @@ class ViewModel : ObservableObject{
     func teamFixtureGet(teamid: Int, season: Int, status: String){
         teamfixtureloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().teamFixture)team=\(teamid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -246,7 +247,7 @@ class ViewModel : ObservableObject{
     func teamInformationGet(teamid: Int){
         teamInfoloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().teamInformation)\(teamid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -277,7 +278,7 @@ class ViewModel : ObservableObject{
     func teamPlayerGet(teamid: Int, season: Int){
         teamPlayerloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().teamPlayer)season=\(season)/teamid=\(teamid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -309,7 +310,7 @@ class ViewModel : ObservableObject{
     func teamStatisticGet(teamid: Int, season: Int, leagueid: Int){
         teamStatisticloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().teamStatistic)league=\(leagueid)/team=\(teamid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -342,7 +343,7 @@ class ViewModel : ObservableObject{
     func leagueFixtureGet(season: Int, leagueid: Int, status: String){
         leagueFixtureloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().leagueFixture)league=\(leagueid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -375,7 +376,7 @@ class ViewModel : ObservableObject{
     func leagueStandingGet(season: Int, leagueid: Int){
         leagueStandingloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().leagueStanding)league=\(leagueid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -409,7 +410,7 @@ class ViewModel : ObservableObject{
     func leagueTopScoreGet(season: Int, leagueid: Int){
         leagueStandingloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().leagueTopPlayer)league=\(leagueid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -443,7 +444,7 @@ class ViewModel : ObservableObject{
     func singlePlayerDetails(season: Int, playerid: Int){
         leagueStandingloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().singlePlayerDetails)player=\(playerid)/season=\(season)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -474,7 +475,7 @@ class ViewModel : ObservableObject{
     func playerSquadGet( playerid: Int){
         leagueStandingloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().playerSquad)player=\(playerid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -504,7 +505,7 @@ class ViewModel : ObservableObject{
     func playerTransferGet(playerid: Int){
         
         var request = URLRequest(url: URL(string: "\(EndPoint().playerTransfer)player=\(playerid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -533,7 +534,7 @@ class ViewModel : ObservableObject{
     func playerTrophyGet(playerid: Int){
         print(playerid)
         var request = URLRequest(url: URL(string: "\(EndPoint().playertrophy)player=\(playerid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -607,7 +608,7 @@ class ViewModel : ObservableObject{
         
         //        self.livevideo1Loading = true;
         //        var request = URLRequest(url: URL(string: "\(EndPoint().liveVideobyId)")!)
-        //        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        //        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         //        request.httpMethod = "GET"
         //
@@ -646,7 +647,7 @@ class ViewModel : ObservableObject{
     func multipleFixtureGet(fixtureid: String){
         self.livevideo1Loading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().getMultipleFixture)\(fixtureid)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -679,7 +680,7 @@ class ViewModel : ObservableObject{
     func phpStreamGet(){
         self.phpStreamLoading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().phpstream)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -712,7 +713,7 @@ class ViewModel : ObservableObject{
     @Published var adsdata: Ads?
     func adsGet() async {
         //        var request =  URLRequest(url: URL(string: "\(EndPoint().adsjson)")!)
-        //        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        //        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         //        request.httpMethod = "GET"
         //
@@ -758,7 +759,7 @@ class ViewModel : ObservableObject{
         print("sdjvsd \(EndPoint().pullget)\(matchID)");
         self.pollloading = true;
         var request = URLRequest(url: URL(string: "\(EndPoint().pullget)\(matchID)")!)
-        request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+        request.addValue("ttttttttt", forHTTPHeaderField: "ab")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
         
@@ -808,7 +809,7 @@ class ViewModel : ObservableObject{
     
     func pollUpdate(matchID: Int, home: Int, away: Int, homename: String, awayname: String, draw: Int) async {
         var request = URLRequest(url: URL(string: "\(EndPoint().pullUpdate)")!)
-           request.addValue("live-soccer-tv-footballl-live-tv", forHTTPHeaderField: "ab")
+           request.addValue("ttttttttt", forHTTPHeaderField: "ab")
            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "POST"
             let parameters: [String: Any] = [
