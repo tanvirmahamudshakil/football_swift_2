@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct leagueStandingPage: View {
+struct LeagueStandingPage: View {
     @StateObject var viewmodel = ViewModel()
     var leagueid : Int
     var season : Int
@@ -98,8 +98,8 @@ struct dataList: View {
             Text(standing.team?.name ?? "").font(.system(size:idiom == .pad ? 16 : 12))
             Spacer()
             Text("\(alldata.played ?? 0)").font(.system(size:idiom == .pad ? 16 : 12))
-            Text("\(alldata.goals!.goalsFor ?? 0 - alldata.goals!.against! )").font(.system(size:idiom == .pad ? 16 : 12))
-            Text("\((alldata.win! * 3) + alldata.draw!)").font(.system(size:idiom == .pad ? 16 : 12))
+            Text("\((alldata.goals!.goalsFor ?? 0) - (alldata.goals!.against ?? 0) )").font(.system(size:idiom == .pad ? 16 : 12))
+            Text("\(((alldata.win ?? 0) * 3) + (alldata.draw ?? 0))").font(.system(size:idiom == .pad ? 16 : 12))
         }
     }
 }

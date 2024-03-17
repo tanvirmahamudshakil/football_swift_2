@@ -1,8 +1,18 @@
 //
 //  MenuPage.swift
-//  football_swift_2
+//  football_1
 //
-//  Created by Tanvir on 17/3/24.
+//  Created by Tanvir on 21/2/24.
 //
 
-import Foundation
+import SwiftUI
+
+struct MenuPage: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+#Preview {
+    MenuPage()
+}
