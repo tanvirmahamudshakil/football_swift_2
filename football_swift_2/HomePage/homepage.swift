@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct homepage: View {
+    var liveenable : Bool = false;
     @State var selectTab : Int = 2;
     @State var selectDate: Date = Date()
     @StateObject var viewmodel = ViewModel()
@@ -31,12 +32,15 @@ struct homepage: View {
                     GoogleBannerAdView()
                 }.navigationTitle("HomePage").navigationBarTitleDisplayMode(.inline)
                     .toolbar{
+                        
                         ToolbarItem(placement: .navigationBarLeading) {
-                          Button(action: {
-                              Router.shared.path.append(pageRoute(name: "stream"))
-                          }) {
-                              Image("live-tv").resizable().scaledToFit().frame(width: 20)
-                          }
+                            if(liveenable){
+                                Button(action: {
+                                  Router.shared.path.append(pageRoute(name: "stream"))
+                              }) {
+                                  Image("live-tv").resizable().scaledToFit().frame(width: 20)
+                              }
+                            }
                         }
                         ToolbarItem(placement: .navigationBarTrailing) {
                           Button(action: {

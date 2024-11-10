@@ -106,6 +106,7 @@ struct detailsScoreBox: View {
             let date = getDateFromString(matchdetails.first?.fixture?.date! ?? "", format: format)
         }
     }
+
 }
 
 

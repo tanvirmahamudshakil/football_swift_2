@@ -28,8 +28,11 @@ struct ContentView: View {
                 if(!showHomePage){
                     splashScreen()
                 }else{
-                    AppOpenAdView(openadsid: viewmodel.adsdata?.gopenAds ?? "")
-                    homepage()
+                    if(viewmodel.adsdata?.google == 1) {
+                        AppOpenAdView(openadsid: viewmodel.adsdata?.gopenAds ?? "")
+                    }
+                    
+                    homepage(liveenable: viewmodel.adsdata?.streamByMatchIDPage != 0 ||  viewmodel.adsdata?.phpStream != 0 ? true : false)
                     .navigationDestination(for: pageRoute.self){i in
                         if(i.name == "live"){
                             LiveScore()
